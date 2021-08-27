@@ -17,7 +17,6 @@ body {
 	background-color: rgb(253, 191, 48);
 	height: 200px;
 }
-
 .information {
 	display: inline-block;
 	position: absolute;
@@ -63,7 +62,6 @@ a {
 	text-decoration: none;
 	color: rgb(0, 7, 33);
 }
-
 .call {
 	width: 220px;
 	height: 50px;
@@ -91,7 +89,6 @@ a {
 	top: 25px;
 	left: 70px;
 }
-
 .mail {
 	width: 220px;
 	height: 50px;
@@ -140,7 +137,6 @@ a {
 ul li:first-child a {
 	color: yellow;
 }
-
 ul li > a {
 	color: white;
 	margin-right: 25px;
@@ -287,7 +283,6 @@ ul li > a {
 	border-left: dotted 2px white;
 	border-radius: 50%;
 }
-
 .about-us-quality {
 	grid-area: quality;
 	background-color: rgb(253, 191, 48);
@@ -313,7 +308,6 @@ ul li > a {
 	justify-content: center;
 	padding-right: 47px;
 }
-
 .about-us h3 {
 	font-family: "Lato", sans-serif;
 	font-size: 30px;
@@ -328,7 +322,6 @@ ul li > a {
 	font-size: 20px;
 	margin-top: 10px;
 }
-
 .about-container {
 	grid-area: about-container;
 	display: flex;
@@ -387,7 +380,6 @@ ul li > a {
 	top: 350px;
 	left: 60px;
 }
-
 .about-box-button {
 	width: 250px;
 	height: 45px;
@@ -436,7 +428,6 @@ ul li > a {
 	left: 30px;
 	top: 15px;
 }
-
 .container-right {
 	background-color: rgb(253, 191, 48);
 }
@@ -444,7 +435,6 @@ ul li > a {
 .container-right-two {
 	color: rgb(0, 7, 33);
 }
-
 .container-left-one h2,
 .container-left-two h2,
 .container-right-one h2,
@@ -465,7 +455,6 @@ ul li > a {
 	font-weight: 900;
 	text-transform: uppercase;
 }
-
 .service {
 	grid-area: service;
 	height: 1800px;
