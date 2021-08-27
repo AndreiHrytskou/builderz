@@ -3,8 +3,17 @@ body {
 	margin: 0;
 	scroll-behavior: smooth;
 }
-
+.wrapper {
+	display: grid;
+	grid-template-columns: 1519px;
+	grid-template-rows: 200px 7140px 420px;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
 .header {
+	grid-area: header;
 	background-color: rgb(253, 191, 48);
 	height: 200px;
 }
@@ -115,10 +124,10 @@ a {
 	align-items: flex-end;
 	position: relative;
 	top: 90px;
-	left: 80px;
-	width: 90vw;
-	height: 110px;
+	left: 40px;
 	background-color: rgb(0, 7, 33);
+	width: 90em;
+	height: 110px;
 }
 .menu-items {
 	display: flex;
@@ -156,7 +165,24 @@ ul li > a {
 	top: 30px;
 	right: 30px;
 }
+.main {
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 1519px;
+	grid-template-rows: 1000px 1000px 200px 1800px 600px 800px 640px 400px 700px;
+	grid-template-areas:
+		"about"
+		"about-container"
+		"container"
+		"service"
+		"video"
+		"team"
+		"question"
+		"customer"
+		"blog";
+}
 .about {
+	grid-area: about;
 	display: flex;
 	flex-wrap: wrap;
 	height: 1000px;
@@ -165,8 +191,8 @@ ul li > a {
 .about-image {
 	background-image: url(/builderz/img/carousel-3.jpg);
 	background-repeat: no-repeat;
-	background-size: 100vw 600px;
-	width: 100vw;
+	background-size: 100% 600px;
+	width: 1519px;
 	height: 600px;
 	display: flex;
 	flex-direction: column;
@@ -232,16 +258,15 @@ ul li > a {
 	font-size: 50px;
 }
 .about-us {
-	width: 100vw;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(3, 506px);
+	grid-template-rows: 400px;
+	grid-template-areas: "expert quality support";
 }
 .about-us-expert {
+	grid-area: expert;
 	background-color: rgb(0, 7, 33);
 	color: rgb(253, 191, 48);
-	fill: rgb(253, 191, 48);
-	width: 33.3%;
 	height: 400px;
 	display: flex;
 	align-items: center;
@@ -264,18 +289,18 @@ ul li > a {
 }
 
 .about-us-quality {
+	grid-area: quality;
 	background-color: rgb(253, 191, 48);
 	color: rgb(0, 7, 33);
-	width: 33.3%;
 	height: 400px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 .about-us-support {
+	grid-area: support;
 	background-color: rgb(0, 7, 33);
 	color: rgb(253, 191, 48);
-	width: 33.3%;
 	height: 400px;
 	display: flex;
 	align-items: center;
@@ -305,7 +330,9 @@ ul li > a {
 }
 
 .about-container {
+	grid-area: about-container;
 	display: flex;
+	height: 1000px;
 }
 .about-box {
 	width: 40%;
@@ -318,6 +345,7 @@ ul li > a {
 	top: 100px;
 }
 .about-box-us {
+	position: relative;
 	width: 800px;
 	height: 600px;
 	display: flex;
@@ -330,9 +358,9 @@ ul li > a {
 	margin: 0;
 	font-family: "Lato", sans-serif;
 	color: rgb(253, 191, 48);
-	position: relative;
-	top: 150px;
-	left: 85px;
+	position: absolute;
+	top: 100px;
+	left: 60px;
 }
 .about-box-us h3 {
 	width: 500px;
@@ -342,21 +370,22 @@ ul li > a {
 	font-size: 50px;
 	font-weight: 900;
 	position: absolute;
-	top: 1400px;
-	left: 635px;
+	top: 140px;
+	left: 60px;
 }
 .about-box-us p,
 .about-box-us p + p {
-	width: 40vw;
+	width: 40em;
+	color: gray;
 	font-family: "Lato", sans-serif;
 	position: absolute;
-	top: 1500px;
-	left: 635px;
+	top: 250px;
+	left: 60px;
 }
 .about-box-us p + p {
 	position: absolute;
-	top: 1600px;
-	left: 635px;
+	top: 350px;
+	left: 60px;
 }
 
 .about-box-button {
@@ -369,12 +398,11 @@ ul li > a {
 	background-color: rgb(253, 191, 48);
 	font-size: 20px;
 	position: absolute;
-	top: 1750px;
-	left: 635px;
+	top: 550px;
+	left: 60px;
 }
 .container {
-	position: relative;
-	top: 200px;
+	grid-area: container;
 	display: flex;
 	height: 200px;
 }
@@ -437,6 +465,15 @@ ul li > a {
 	font-weight: 900;
 	text-transform: uppercase;
 }
+
+.service {
+	grid-area: service;
+	height: 1800px;
+	display: flex;
+	flex-wrap: wrap;
+	align-self: start;
+	position: relative;
+}
 .service h2 {
 	display: inline-block;
 	text-align: center;
@@ -453,20 +490,21 @@ ul li > a {
 	font-family: "Lato", sans-serif;
 	font-size: 32px;
 }
-.service {
-	display: flex;
-	flex-wrap: wrap;
-	align-self: start;
-}
 .service-title {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	position: relative;
+	position: absolute;
 	top: 250px;
 	left: 570px;
 }
 .service-box {
+	margin-top: 400px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.service-box2 {
+	margin-bottom: 260px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -475,7 +513,6 @@ ul li > a {
 	margin: 0 40px 10px 40px;
 	position: relative;
 	left: 50px;
-	top: 300px;
 	width: 400px;
 	height: 550px;
 }
@@ -505,16 +542,16 @@ ul li > a {
 	left: 358px;
 }
 .video {
-	position: absolute;
-	top: 3500px;
+	grid-area: video;
+	position: relative;
 	height: 600px;
 }
 .video-play {
 	width: 78px;
 	height: 78px;
-	position: relative;
-	top: 300px;
-	left: 700px;
+	position: absolute;
+	top: 200px;
+	left: 750px;
 	border: rgba(218, 165, 32, 0.7) 9px solid;
 	border-radius: 50%;
 }
@@ -523,11 +560,10 @@ ul li > a {
 	background-color: rgba(218, 165, 32, 0.7);
 }
 .team {
+	grid-area: team;
 	height: 800px;
-	position: relative;
-	top: 860px;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 375px);
 	grid-template-rows: 160px 500px;
 	grid-template-areas:
 		"team-title   team-title   team-title   team-title"
@@ -596,6 +632,7 @@ ul li > a {
 	top: -5px;
 }
 .question {
+	grid-area: question;
 	display: grid;
 	grid-template-columns: 650px 100px 650px;
 	grid-template-rows: 70px 70px 500px;
@@ -604,7 +641,6 @@ ul li > a {
 		"question-ask question-ask question-ask"
 		"question-ask-box question-ask-box question-ask-box";
 	position: relative;
-	top: 800px;
 	margin-left: 60px;
 }
 .question-header {
@@ -675,10 +711,10 @@ li {
 	list-style: none;
 }
 .customer {
+	grid-area: customer;
 	width: 800px;
 	height: 400px;
 	position: relative;
-	top: 1000px;
 	left: 460px;
 }
 .customer1 {
@@ -722,14 +758,14 @@ li {
 	margin: 0;
 }
 .blog {
+	grid-area: blog;
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 1519px;
 	grid-template-rows: 1fr;
 	grid-template-areas:
 		"blog-header"
 		"blog-items";
-	position: absolute;
-	top: 6200px;
+	position: relative;
 }
 .blog-header {
 	grid-area: blog-header;
@@ -753,7 +789,7 @@ li {
 .blog-items {
 	grid-area: blog-items;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 450px);
 	grid-template-rows: 1fr;
 	grid-template-areas: "blog-item1 blog-item2 blog-item3";
 }
@@ -783,12 +819,11 @@ li {
 }
 .blog-item2 {
 	grid-area: blog-item2;
-	margin-left: 50px;
+	margin-left: 100px;
 }
 .blog-item3 {
 	grid-area: blog-item3;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 140px;
 }
 .blog-item-plus {
 	width: 30px;
@@ -820,12 +855,11 @@ li {
 	color: gray;
 }
 .footer {
-	position: absolute;
-	top: 7000px;
+	grid-area: footer;
 	background-color: rgb(0, 7, 33);
 	display: grid;
 	grid-template-rows: 300px 60px 60px;
-	grid-template-columns: 1fr;
+	grid-template-columns: 1519px;
 	grid-template-areas:
 		"footer-information"
 		"footer-nav"
@@ -899,9 +933,6 @@ li {
 .useful-pages {
 	grid-area: useful-pages;
 }
-.useful-pages-list {
-}
-
 .newsletter {
 	grid-area: newsletter;
 	letter-spacing: 1.2px;
